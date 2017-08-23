@@ -1,21 +1,8 @@
 import React from 'react';
+import '../styles/index.scss';
 
 // TODO: Webpack SCSS compile to storybook header
 const styles = {
-	wrapper: {
-		borderRadius: 20,
-		height: 400,
-		position: 'relative',
-		display: 'flex',
-		flexDirection: 'row',
-		backgroundImage: 'url("https://images.unsplash.com/photo-1478001517127-fccc92f54906?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=")', // TODO: Storybook local assets config
-		backgroundRepeat: 'no-repeat',
-		backgroundSize: 'cover',
-		boxShadow: '0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)',
-		margin: 20,
-		fontFamily: '"Roboto", sans-serif',
-		maxWidth: 900
-	},
 	innerLeft: {
 		width: 150
 	},
