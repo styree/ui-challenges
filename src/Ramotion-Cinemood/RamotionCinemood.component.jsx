@@ -1,8 +1,5 @@
 import React from 'react';
 
-// TODO: Module failing build
-// import AccessAlarmIcon from 'material-ui-icons/AccessAlarm';
-
 // TODO: Webpack SCSS compile to storybook header
 const styles = {
 	wrapper: {
@@ -95,7 +92,7 @@ export default class RamotionCinemood extends React.Component {
 	//https://dribbble.com/shots/3479873-Cinemood-Product-Card-Concept
 	render () {
 		return (
-			<div style={styles.wrapper}>
+			<div style={styles.wrapper} className="wrapper">
 				<div style={styles.innerLeft}></div>
 				<div style={styles.innerRight}>
 					<div style={{ height: '100%', width: 150 }}>
