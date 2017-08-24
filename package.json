@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "start": "start-storybook -p 9001 -c .storybook"
   },
   "dependencies": {
     "@storybook/addon-actions": "^3.2.0",

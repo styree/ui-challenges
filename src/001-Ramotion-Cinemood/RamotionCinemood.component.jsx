@@ -6,7 +6,11 @@ export default class RamotionCinemood extends React.Component {
 	render () {
 		return (
 			<div className="cinemood">
-				<div className="cinemood__inner-left"></div>
+				<div className="cinemood__inner-left">
+					<div className="tempImage"></div>
+					<div className="tempImage tempImage--main"></div>
+					<div className="tempImage"></div>
+				</div>
 				<div className="cinemood__inner-right">
 					<div style={{ height: '100%', width: 150 }}>
 						<svg style={{ height: '100%', width: '100%' }} viewBox="0 0 150 400"
@@ -21,7 +25,7 @@ export default class RamotionCinemood extends React.Component {
 					</div>
 					<div className="cinemood__inner-right__content">
 						<div className="cinemood__content-header__action">
-							{/*<AccessAlarmIcon/>*/}
+							{/*<AlarmIcon/>*/}
 							<div className="tempIcon"></div>
 						</div>
 						<div className="cinemood__content-header">

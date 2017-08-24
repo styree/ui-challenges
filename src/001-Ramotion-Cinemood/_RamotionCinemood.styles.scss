@@ -2,124 +2,128 @@ $cinemood--border-radius: 20;
 $cinemood--height: 400;
 $cinemood--background-image: "https://images.unsplash.com/photo-1478001517127-fccc92f54906?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
 
+// TODO: cleanup flex
+
 .cinemood {
-	border-radius: $cinemood--border-radius + px;
-	height: $cinemood--height + px;
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	background-image: url($cinemood--background-image);
-	background-repeat: no-repeat;
-	background-size: cover;
-	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-	margin: 20px;
-	font-family: 'Roboto', sans-serif;
-	max-width: 900px;
+    border-radius: $cinemood--border-radius + px;
+    height: $cinemood--height + px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-image: url($cinemood--background-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    margin: 20px;
+    font-family: 'Roboto', sans-serif;
+    max-width: 900px;
 
-	&__inner-left {
-		width: 150px;
-	}
+    &__inner-left {
+        width: 150px;
+        position: relative;
+        height: 100%;
+    }
 
-	&__inner-right {
-		flex: 1;
-		display: flex;
-		flex-direction: row;
+    &__inner-right {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
 
-		&__content {
-			flex: 1;
-			background-color: white;
-			flex-direction: column;
-			padding: 20px;
-			border-top-right-radius: $cinemood--border-radius + px;
-			border-bottom-right-radius: $cinemood--border-radius + px;
-		}
-	}
+        &__content {
+            flex: 1;
+            background-color: white;
+            flex-direction: column;
+            padding: 20px;
+            border-top-right-radius: $cinemood--border-radius + px;
+            border-bottom-right-radius: $cinemood--border-radius + px;
+        }
+    }
 
-	&__content-header {
-		flex-direction: row;
-		width: 100%;
-		display: flex;
+    &__content-header {
+        flex-direction: row;
+        width: 100%;
+        display: flex;
 
-		&__action {
-			flex-direction: row;
-			display: flex;
-			justify-content: flex-end;
-		}
+        &__action {
+            flex-direction: row;
+            display: flex;
+            justify-content: flex-end;
+        }
 
-		&__title {
-			flex: 1;
-			margin: 0;
-			font-size: 40px;
-			font-weight: 900;
-		}
+        &__title {
+            flex: 1;
+            margin: 0;
+            font-size: 40px;
+            font-weight: 900;
+        }
 
-		&__price {
-			color: blue;
-			margin: 0;
-			font-size: 40px;
-			font-weight: 900;
-		}
-	}
+        &__price {
+            color: blue;
+            margin: 0;
+            font-size: 40px;
+            font-weight: 900;
+        }
+    }
 
-	&__subtitle {
-		margin: 0;
-	}
+    &__subtitle {
+        margin: 0;
+    }
 
-	&__content-description {
-		margin: 40px 0;
-		font-size: 14px;
-	}
+    &__content-description {
+        margin: 40px 0;
+        font-size: 14px;
+    }
 
-	&__blurbs {
-		flex-direction: row;
-		display: flex;
-		flex-wrap: wrap;
-		width: 100%;
-		justify-content: space-between;
+    &__blurbs {
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
 
-		&__item {
-			width: 40%;
-			flex-direction: row;
-			display: flex;
-			font-size: 14px;
-			margin-bottom: 20px;
+        &__item {
+            width: 40%;
+            flex-direction: row;
+            display: flex;
+            font-size: 14px;
+            margin-bottom: 20px;
 
-			p {
-				flex: 1;
-				margin-top: 0;
-				margin-left: 10px;
-			}
-		}
-	}
+            p {
+                flex: 1;
+                margin-top: 0;
+                margin-left: 10px;
+            }
+        }
+    }
 
-	.tempIcon {
-		height: 30px;
-		width: 30px;
-		background-color: blue;
-		border-radius: 50%;
-	}
+    .tempIcon {
+        height: 30px;
+        width: 30px;
+        background-color: blue;
+        border-radius: 50%;
+    }
+
+    .tempImage {
+        height: 50px;
+        width: 50px;
+        background-color: blue;
+        position: absolute;
+
+        &:first-child {
+            top: 0;
+            left: 20px;
+        }
+
+        &:last-child {
+            bottom: 0;
+            left: 20px;
+        }
+
+        &--main {
+            height: 100px;
+            width: 100px;
+            right: -50px;
+            top: calc(50% - 50px);
+        }
+    }
 }
-
-.pointsRow {
-	flex-direction: row;
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	justify-content: space-between;
-}
-
-.point {
-	width: 40%;
-	flex-direction: row;
-	display: flex;
-	font-size: 14px;
-	margin-bottom: 20px;
-}
-
-.pointDescription {
-	flex: 1;
-	margin-top: 0;
-	margin-left: 10px;
-}
-
-
