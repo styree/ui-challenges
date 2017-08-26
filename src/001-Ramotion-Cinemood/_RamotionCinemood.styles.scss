@@ -3,14 +3,12 @@ $cinemood--height: 500;
 $cinemood--background-image: "https://images.unsplash.com/photo-1467474750283-083e4610910c?dpr=2&auto=format&fit=crop&w=1500&h=844&q=80&cs=tinysrgb&crop=";
 $cinemood--accent-color: #9D46D4;
 $cinemood--text-color: #3E363E;
-// TODO: cleanup flex
 
 .cinemood {
+    @include row();
     border-radius: $cinemood--border-radius + px;
     height: $cinemood--height + px;
     position: relative;
-    display: flex;
-    flex-direction: row;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
     margin: 20px;
     color: $cinemood--text-color;
@@ -44,14 +42,13 @@ $cinemood--text-color: #3E363E;
     }
 
     &__inner-right {
+        @include row();
         flex: 1;
-        display: flex;
-        flex-direction: row;
 
         &__content {
+            @include column();
             flex: 1;
             background-color: white;
-            flex-direction: column;
             padding: 20px;
             border-top-right-radius: $cinemood--border-radius + px;
             border-bottom-right-radius: $cinemood--border-radius + px;
@@ -70,19 +67,16 @@ $cinemood--text-color: #3E363E;
     }
 
     &__content-header {
-        flex-direction: row;
-        display: flex;
+        @include row();
         width: 100%;
 
         &__action {
-            flex-direction: row;
-            display: flex;
+            @include row();
             justify-content: flex-end;
             margin-bottom: 16px;
 
             &__icon {
-                flex-direction: row;
-                display: flex;
+                @include row();
                 align-items: center;
                 justify-content: center;
                 border: solid 1px $cinemood--accent-color;
@@ -99,10 +93,10 @@ $cinemood--text-color: #3E363E;
             }
 
             &__icon div {
+                @include row();
                 position: absolute;
                 height: 20px;
                 width: 20px;
-                flex-direction: row;
                 align-items: center;
                 border-radius: 50%;
                 background-color: $cinemood--accent-color;
@@ -153,16 +147,14 @@ $cinemood--text-color: #3E363E;
     }
 
     &__blurbs {
-        flex-direction: row;
-        display: flex;
+        @include row();
         flex-wrap: wrap;
         width: 100%;
         justify-content: space-between;
 
         &__item {
+            @include row();
             width: 50%;
-            flex-direction: row;
-            display: flex;
             font-size: 12px;
 
             &:first-of-type,
@@ -186,8 +178,7 @@ $cinemood--text-color: #3E363E;
         }
 
         &__see-more {
-            flex-direction: row;
-            display: flex;
+            @include row();
             align-items: center;
             color: $cinemood--accent-color;
             height: 20px;
@@ -212,11 +203,10 @@ $cinemood--text-color: #3E363E;
     }
 
     &__content-actions {
-        flex-direction: row;
+        @include row();
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        display: flex;
 
         button {
             font-size: 14px;
@@ -244,13 +234,12 @@ $cinemood--text-color: #3E363E;
     }
 
     &__slide-control {
+        @include column();
         position: absolute;
         left: 10px;
         height: 60px;
         top: calc(50% - 30px);
         width: 20px;
-        flex-direction: column;
-        display: flex;
         align-items: center;
         justify-content: space-between;
 
