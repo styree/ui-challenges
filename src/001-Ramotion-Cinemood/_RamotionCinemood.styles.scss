@@ -217,6 +217,8 @@ $cinemood--text-color: #3E363E;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
             background-color: white;
             transition: all ease-in-out 250ms;
+            height: 40px;
+            color: grey;
 
             &:hover {
                 background-color: darken(white, 10%);
@@ -227,8 +229,23 @@ $cinemood--text-color: #3E363E;
             }
 
             &.primary {
+                position: relative;
                 background-color: $cinemood--accent-color;
                 color: white;
+                overflow: hidden;
+
+                div {
+                    @include row();
+                    align-items: center;
+                    justify-content: center;
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5));
+                }
             }
         }
     }

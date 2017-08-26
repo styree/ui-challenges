@@ -93,7 +93,11 @@ export default class RamotionCinemood extends React.Component {
 							<hr/>
 						</div>
 						<div className="cinemood__content-actions">
-							<button className="primary">Add to cart</button>
+							<button className="primary">
+								<div>
+									<span>Add to Cart</span>
+								</div>
+							</button>
 							<button>Add to comparison</button>
 						</div>
 					</div>
