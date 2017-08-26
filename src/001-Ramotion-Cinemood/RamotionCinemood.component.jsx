@@ -46,24 +46,24 @@ export default class RamotionCinemood extends React.Component {
 						<div className="cinemood__blurbs">
 							<div className="cinemood__blurbs__item">
 								<EyeIcon/>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing
-									elit.</p>
+								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptat accusanti doloremque.</p>
 							</div>
 							<div className="cinemood__blurbs__item">
 								<BatteryIcon/>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing
-									elit.</p>
+								<p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
 							</div>
 							<div className="cinemood__blurbs__item">
 								<WifiIcon/>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing
-									elit.</p>
+								<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
 							</div>
 							<div className="cinemood__blurbs__item">
 								<AlarmIcon/>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing
-									elit.</p>
+								<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
 							</div>
+						</div>
+						<div className="cinemood__content-actions">
+							<button className="primary">Add to cart</button>
+							<button>Add to comparison</button>
 						</div>
 					</div>
 				</div>

@@ -1,8 +1,8 @@
 $cinemood--border-radius: 20;
 $cinemood--height: 500;
-//$cinemood--background-image: "https://images.unsplash.com/photo-1478001517127-fccc92f54906?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=50&cs=tinysrgb";
 $cinemood--background-image: "https://images.unsplash.com/photo-1467474750283-083e4610910c?dpr=2&auto=format&fit=crop&w=1500&h=844&q=80&cs=tinysrgb&crop=";
 $cinemood--accent-color: #BA39BA;
+$cinemood--text-color: #3E363E;
 // TODO: cleanup flex
 
 .cinemood {
@@ -13,7 +13,7 @@ $cinemood--accent-color: #BA39BA;
     flex-direction: row;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
     margin: 20px;
-    color: #333;
+    color: $cinemood--text-color;
     font-family: 'Roboto', sans-serif;
     max-width: 800px;
     overflow: hidden;
@@ -102,8 +102,8 @@ $cinemood--accent-color: #BA39BA;
                 span {
                     text-align: center;
                     display: inline-block;
-                    width:100%;
-                    font-size:12px;
+                    width: 100%;
+                    font-size: 12px;
                 }
             }
         }
@@ -113,6 +113,7 @@ $cinemood--accent-color: #BA39BA;
             margin: 0;
             font-size: 40px;
             font-weight: 900;
+            letter-spacing: 1px;
         }
 
         &__price {
@@ -121,15 +122,16 @@ $cinemood--accent-color: #BA39BA;
             font-size: 40px;
             font-weight: 900;
 
-            span{
-                font-size:20px;
-                margin-right: 8px;
+            span {
+                font-size: 20px;
+                margin-right: 4px;
             }
         }
     }
 
     &__subtitle {
         margin: 0;
+        letter-spacing: 1px;
     }
 
     &__content-description {
@@ -147,7 +149,7 @@ $cinemood--accent-color: #BA39BA;
         justify-content: space-between;
 
         &__item {
-            width: 40%;
+            width: 50%;
             flex-direction: row;
             display: flex;
             font-size: 12px;
@@ -157,6 +159,7 @@ $cinemood--accent-color: #BA39BA;
                 flex: 1;
                 margin-top: 0;
                 margin-left: 10px;
+                font-weight: 300;
             }
         }
 
@@ -167,10 +170,41 @@ $cinemood--accent-color: #BA39BA;
         }
     }
 
+    &__content-actions {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        display: flex;
+
+        button {
+            font-size: 14px;
+            padding: 12px 0;
+            border: 0;
+            width: 200px;
+            border-radius: 20px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            background-color: white;
+            transition: all ease-in-out 250ms;
+
+            &:hover {
+                background-color: darken(white, 10%);
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &.primary {
+                background-color: $cinemood--accent-color;
+                color: white;
+            }
+        }
+    }
+
     .tempImage {
         height: 100px;
         width: 100px;
-        //background-color: $cinemood--accent-color;
         position: absolute;
 
         &:first-child {
