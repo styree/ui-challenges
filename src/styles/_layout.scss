@@ -1,0 +1,15 @@
+// TODO: Pass in align/justify modifiers
+
+@mixin row() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
+
+@mixin column() {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
