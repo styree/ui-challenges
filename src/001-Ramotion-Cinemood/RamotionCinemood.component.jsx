@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/index.scss';
+import { ShoppingCartIcon, AlarmIcon, EyeIcon, BatteryIcon, WifiIcon } from '../icons';
 
 export default class RamotionCinemood extends React.Component {
 	//https://dribbble.com/shots/3479873-Cinemood-Product-Card-Concept
@@ -8,7 +9,9 @@ export default class RamotionCinemood extends React.Component {
 			<div className="cinemood">
 				<div className="cinemood__inner-left">
 					<div className="tempImage"></div>
-					<div className="tempImage tempImage--main"></div>
+					<div className="tempImage tempImage--main">
+						<img src="https://cinemood.com/wp-content/themes/focux-child/assets/cwe-278/build/img/pictures/bottom-cinemood.png" height="100%" width="100%" alt=""/>
+					</div>
 					<div className="tempImage"></div>
 				</div>
 				<div className="cinemood__inner-right">
@@ -16,7 +19,7 @@ export default class RamotionCinemood extends React.Component {
 						<svg style={{ height: '100%', width: '100%' }} viewBox="0 0 150 400"
 							 preserveAspectRatio="xMinYMin meet">
 							<polygon
-								points="150,0 0,200 150,400"
+								points="150,0 0,250 150,500"
 								style={{ fill: 'white' }}
 								height="100%"
 								x="0"
@@ -25,36 +28,39 @@ export default class RamotionCinemood extends React.Component {
 					</div>
 					<div className="cinemood__inner-right__content">
 						<div className="cinemood__content-header__action">
-							{/*<AlarmIcon/>*/}
-							<div className="tempIcon"></div>
+							<div className="cinemood__content-header__action__icon">
+								<div><span>2</span></div>
+								<ShoppingCartIcon/>
+							</div>
 						</div>
 						<div className="cinemood__content-header">
 							<h2 className="cinemood__content-header__title">CINEMOOD</h2>
 							<h2 className="cinemood__content-header__price"><span>$</span>399</h2>
 						</div>
 						<h3 className="cinemood__subtitle">Storyteller</h3>
-						<p className="cinemood__content-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						<p className="cinemood__content-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit,
 							sed do eiusmod tempor incididunt ut
 							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-							laboris nisi ut aliquip ex ea commodo consequat.</p>
+							laboris nisi ut aliquip.</p>
 						<div className="cinemood__blurbs">
 							<div className="cinemood__blurbs__item">
-								<div className="tempIcon"></div>
+								<EyeIcon/>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing
 									elit.</p>
 							</div>
 							<div className="cinemood__blurbs__item">
-								<div className="tempIcon"></div>
+								<BatteryIcon/>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing
 									elit.</p>
 							</div>
 							<div className="cinemood__blurbs__item">
-								<div className="tempIcon"></div>
+								<WifiIcon/>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing
 									elit.</p>
 							</div>
 							<div className="cinemood__blurbs__item">
-								<div className="tempIcon"></div>
+								<AlarmIcon/>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing
 									elit.</p>
 							</div>

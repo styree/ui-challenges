@@ -1,7 +1,8 @@
 $cinemood--border-radius: 20;
-$cinemood--height: 400;
-$cinemood--background-image: "https://images.unsplash.com/photo-1478001517127-fccc92f54906?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
-
+$cinemood--height: 500;
+//$cinemood--background-image: "https://images.unsplash.com/photo-1478001517127-fccc92f54906?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=50&cs=tinysrgb";
+$cinemood--background-image: "https://images.unsplash.com/photo-1467474750283-083e4610910c?dpr=2&auto=format&fit=crop&w=1500&h=844&q=80&cs=tinysrgb&crop=";
+$cinemood--accent-color: #BA39BA;
 // TODO: cleanup flex
 
 .cinemood {
@@ -10,13 +11,31 @@ $cinemood--background-image: "https://images.unsplash.com/photo-1478001517127-fc
     position: relative;
     display: flex;
     flex-direction: row;
-    background-image: url($cinemood--background-image);
-    background-repeat: no-repeat;
-    background-size: cover;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
     margin: 20px;
+    color: #333;
     font-family: 'Roboto', sans-serif;
-    max-width: 900px;
+    max-width: 800px;
+    overflow: hidden;
+
+    &:after {
+        display: block;
+        content: '';
+        height: 110%;
+        width: 110%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url($cinemood--background-image);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-color: $cinemood--accent-color;
+        background-blend-mode: soft-light, luminosity;
+        background-position-x: -200px;
+        filter: blur(1px);
+        z-index: -1;
+        opacity: 0.8;
+    }
 
     &__inner-left {
         width: 150px;
@@ -41,13 +60,52 @@ $cinemood--background-image: "https://images.unsplash.com/photo-1478001517127-fc
 
     &__content-header {
         flex-direction: row;
-        width: 100%;
         display: flex;
+        width: 100%;
 
         &__action {
             flex-direction: row;
             display: flex;
             justify-content: flex-end;
+            margin-bottom: 16px;
+
+            &__icon {
+                flex-direction: row;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: solid 1px $cinemood--accent-color;
+                border-radius: 50%;
+                height: 30px;
+                width: 30px;
+                position: relative;
+            }
+
+            &__icon svg {
+                height: 15px;
+                width: 15px;
+                color: $cinemood--accent-color;
+            }
+
+            &__icon div {
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                flex-direction: row;
+                align-items: center;
+                border-radius: 50%;
+                background-color: $cinemood--accent-color;
+                color: white;
+                top: -8px;
+                left: -10px;
+
+                span {
+                    text-align: center;
+                    display: inline-block;
+                    width:100%;
+                    font-size:12px;
+                }
+            }
         }
 
         &__title {
@@ -58,10 +116,15 @@ $cinemood--background-image: "https://images.unsplash.com/photo-1478001517127-fc
         }
 
         &__price {
-            color: blue;
+            color: $cinemood--accent-color;
             margin: 0;
             font-size: 40px;
             font-weight: 900;
+
+            span{
+                font-size:20px;
+                margin-right: 8px;
+            }
         }
     }
 
@@ -70,8 +133,10 @@ $cinemood--background-image: "https://images.unsplash.com/photo-1478001517127-fc
     }
 
     &__content-description {
-        margin: 40px 0;
-        font-size: 14px;
+        margin: 30px 0 40px 0;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.5em;
     }
 
     &__blurbs {
@@ -85,7 +150,7 @@ $cinemood--background-image: "https://images.unsplash.com/photo-1478001517127-fc
             width: 40%;
             flex-direction: row;
             display: flex;
-            font-size: 14px;
+            font-size: 12px;
             margin-bottom: 20px;
 
             p {
@@ -94,19 +159,18 @@ $cinemood--background-image: "https://images.unsplash.com/photo-1478001517127-fc
                 margin-left: 10px;
             }
         }
-    }
 
-    .tempIcon {
-        height: 30px;
-        width: 30px;
-        background-color: blue;
-        border-radius: 50%;
+        svg {
+            height: 30px;
+            width: 30px;
+            color: $cinemood--accent-color;
+        }
     }
 
     .tempImage {
-        height: 50px;
-        width: 50px;
-        background-color: blue;
+        height: 100px;
+        width: 100px;
+        //background-color: $cinemood--accent-color;
         position: absolute;
 
         &:first-child {
@@ -120,10 +184,10 @@ $cinemood--background-image: "https://images.unsplash.com/photo-1478001517127-fc
         }
 
         &--main {
-            height: 100px;
-            width: 100px;
-            right: -50px;
-            top: calc(50% - 50px);
+            height: 200px;
+            width: 200px;
+            right: -120px;
+            top: calc(50% - 100px);
         }
     }
 }
