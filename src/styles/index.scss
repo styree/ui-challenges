@@ -1,5 +1,6 @@
 //@import 'https://fonts.googleapis.com/css?family=Roboto';
-
 @import './layout';
-
-@import '../001-Ramotion-Cinemood/RamotionCinemood.styles';
+@import
+    '../001-Ramotion-Cinemood/RamotionCinemood.styles',
+    '../002-Kohutpiotr-Events-App/KohutpiotrEventsApp.styles'
+;

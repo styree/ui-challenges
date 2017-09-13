@@ -13,3 +13,8 @@
     flex-wrap: nowrap;
     box-sizing: border-box;
 }
+
+@mixin align-center-center() {
+    align-items: center;
+    justify-content: center;
+}
